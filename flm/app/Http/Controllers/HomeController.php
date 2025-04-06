@@ -11,9 +11,9 @@ class HomeController extends Controller
         return view('home');
     }
 
-    public function about()
+    public function evento()
     {
-        return view('about');
+        return view('posts.evento');
     }
 
     public function contact()

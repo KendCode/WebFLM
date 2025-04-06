@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Models\Evento; // Asegúrate de importar el modelo Evento
 
 class HomeController extends Controller
 {
@@ -13,11 +14,14 @@ class HomeController extends Controller
 
     public function evento()
     {
-        return view('posts.evento');
+        return view('evento.store');
     }
-
-    public function contact()
+    public function beneficiario()
     {
-        return view('contact');
+        return view('beneficiario.storeBeneficiario');
+    }
+    public function grupo()
+    {
+        return view('grupo.storeGrupo');
     }
 }

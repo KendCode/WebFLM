@@ -1,7 +1,7 @@
 @extends('layouts.app')
 
 @section('content')
-<h2 class="mb-4 text-center text-success">Lista de Eventos</h2>
+<h2 class="mb-4 text-center py-3 text-success">Lista de Grupo</h2>
 
 @if(session('success'))
     <div class="alert alert-success alert-dismissible fade show" role="alert">
@@ -14,22 +14,28 @@
     <thead class="table-success">
         <tr>
             <th>ID</th>
-            <th>Título</th>
+            <th>Nombre</th>
             <th>Descripción</th>
             <th>Fecha</th>
-            <th>Ubicación</th>
+            <th>Hora</th>
+            <th>Estado</th>
+            <th>Número de Participantes</th>
+            <th>Temática</th>
             <th>MODIFICAR</th>
             <th>ELIMINAR</th>
         </tr>
     </thead>
     <tbody>
-        @foreach($eventos as $evento) <!-- Cambia la variable a $eventos -->
+        @foreach($grupos as $grupo)
         <tr>
-            <td>{{ $evento->id }}</td>
-            <td>{{ $evento->titulo }}</td>
-            <td>{{ $evento->descripcion }}</td>
-            <td>{{ $evento->fecha }}</td>
-            <td>{{ $evento->ubicacion }}</td>
+            <td>{{ $grupo->id }}</td>
+            <td>{{ $grupo->nombre }}</td>
+            <td>{{ $grupo->descripcion }}</td>
+            <td>{{ $grupo->fecha }}</td>
+            <td>{{ $grupo->hora }}</td>
+            <td>{{ $grupo->estado }}</td>
+            <td>{{ $grupo->nroParticipantes }}</td>
+            <td>{{ $grupo->tematica }}</td>
             <td><button type="button" class="btn btn-info text-white">Modificar</button></td>
             <td><button type="button" class="btn btn-danger">Eliminar</button></td>
         </tr>
@@ -38,12 +44,11 @@
 </table>
 
 <div class="d-grid gap-2 d-md-block">
-    <a href="/home" class="bi bi-people-fill">
-        <button type="button" class="m4 btn btn-light">PAGINA PRINCIPAL</button>
+    <a href="/home" class="bi bi-house-fill">
+        <button type="button" class="m4 btn btn-light">PÁGINA PRINCIPAL</button>
     </a>
-    <a href="/home/evento" class="bi bi-people-fill">
-        <button type="button" class="m4 btn btn-dark">AGREGAR EVENTO</button>
+    <a href="/home/grupo/storeGrupo" class="bi bi-calendar-plus-fill">
+        <button type="button" class="m4 btn btn-dark">AGREGAR GRUPO</button>
     </a>
-    
-  </div>
+</div>
 @endsection

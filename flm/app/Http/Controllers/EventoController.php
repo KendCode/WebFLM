@@ -9,49 +9,22 @@ class EventoController extends Controller
 {
     public function index()
     {
-        $eventos = Evento::all(); // Leer eventos
-        return view('eventos.index', compact('eventos'));
-    }
-
-    public function create()
-    {
-        return view('eventos.create'); // Crear evento
+        
     }
 
     public function store(Request $request)
     {
-        $request->validate([
-            'titulo' => 'required|string|max:255',
-            'descripcion' => 'required|string',
-            'fecha' => 'required|date',
-            'ubicacion' => 'required|string|max:255',
-        ]);
+         // Crear y guardar el evento
+         $evento = new Evento();
+         $evento->titulo = $request->titulo;
+         $evento->descripcion = $request->descripcion;
+         $evento->fecha = $request->fecha;
+         $evento->ubicacion = $request->ubicacion;
+         $evento->save();
 
-        Evento::create($request->all()); // Guardar evento
-        return redirect()->route('eventos.index')->with('success', 'Evento creado exitosamente.');
+        // Redirigir de vuelta con un mensaje de éxito
+        return redirect()->back()->with('success', 'Evento guardado exitosamente');
     }
 
-    public function edit(Evento $evento)
-    {
-        return view('eventos.edit', compact('evento')); // Editar evento
-    }
-
-    public function update(Request $request, Evento $evento)
-    {
-        $request->validate([
-            'titulo' => 'required|string|max:255',
-            'descripcion' => 'required|string',
-            'fecha' => 'required|date',
-            'ubicacion' => 'required|string|max:255',
-        ]);
-
-        $evento->update($request->all()); // Actualizar evento
-        return redirect()->route('eventos.index')->with('success', 'Evento actualizado exitosamente.');
-    }
-
-    public function destroy(Evento $evento)
-    {
-        $evento->delete(); // Eliminar evento
-        return redirect()->route('eventos.index')->with('success', 'Evento eliminado exitosamente.');
-    }
+    
 }

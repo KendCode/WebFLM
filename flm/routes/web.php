@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\GrupoController;
 use App\Models\Evento;
-
+use App\Http\Controllers\EventoController;
 /*Route::get('/', function () {
     return view('welcome');
 });*/
@@ -14,10 +14,10 @@ Route::get('/home', [HomeController::class,'index']);
 
 Route::get('/home/evento', [HomeController::class, 'evento'])->name('home.evento');
 
-Route::get('evento', function () {  
+//Route::get('evento', function () {  
     //return "GRUPO DE APOYO DESDE WEB";
 
-    $evento = new Evento;
+    //$evento = new Evento;
     //AGREGAR
     //$evento->titulo='titulo de la prueba';
     //$evento->descripcion='descripcion de la prueba';
@@ -42,9 +42,8 @@ Route::get('evento', function () {
     //$evento->delete();
 
     //LISTAR
-    $evento=Evento::all();
-    return $evento;
+    //$evento=Evento::all();
+    //return $evento;
+//});
 
-
-
-});
+Route::post('evento', [EventoController::class, 'store'])->name('evento.store');

@@ -47,3 +47,4 @@ Route::get('/home/evento', [HomeController::class, 'evento'])->name('home.evento
 //});
 
 Route::post('evento', [EventoController::class, 'store'])->name('evento.store');
+Route::get('/evento/listaEvento', [EventoController::class, 'index'])->name('evento.index');

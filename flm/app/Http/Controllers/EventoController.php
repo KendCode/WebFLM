@@ -9,7 +9,8 @@ class EventoController extends Controller
 {
     public function index()
     {
-        
+        $eventos = Evento::all(); // Obtener todos los eventos
+        return view('posts.listaEvento', compact('eventos')); // Pasar los eventos a la vista
     }
 
     public function store(Request $request)

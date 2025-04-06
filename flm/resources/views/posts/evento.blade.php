@@ -1,8 +1,13 @@
 @extends('layouts.app')
 @section('content')
-    <div class="container p-5 my-5 border">
-        <p class="h1">Evento</p>
-
+<div class="container my-5  d-flex align-items-center justify-content-between">
+  <p class="h1 mb-0">Crear Evento</p>
+  <a href="/evento/listaEvento" class="btn btn-primary">
+      LISTA DE EVENTOS
+  </a>
+</div>
+    <div class="container p-5 border">
+        
          <!-- Alerta de éxito -->
          @if(session('success'))
          <div class="alert alert-success alert-dismissible fade show" role="alert">

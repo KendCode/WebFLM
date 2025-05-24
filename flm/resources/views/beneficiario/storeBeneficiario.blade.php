@@ -56,7 +56,7 @@
       </div>
     </div>
     <div class="col">
-      <button type="submit" class="btn btn-success mt-4">Crear</button>
+      <button type="submit" class="btn btn-primary mt-4">Agregar Beneficiario</button>
     </div>
   </form>
 </div>

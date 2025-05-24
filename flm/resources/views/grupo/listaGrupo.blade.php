@@ -1,7 +1,7 @@
 @extends('layouts.app')
 
 @section('content')
-<h2 class="mb-4 text-center py-3 text-success">Lista de Grupo</h2>
+<h2 class="mb-4 text-center py-3 text-primary">Lista de Grupo</h2>
 
 @if(session('success'))
     <div class="alert alert-success alert-dismissible fade show" role="alert">
@@ -11,7 +11,7 @@
 @endif
 
 <table class="table table-striped table-bordered">
-    <thead class="table-success">
+    <thead class="table-primary">
         <tr>
             <th>ID</th>
             <th>Nombre</th>
@@ -44,10 +44,10 @@
 </table>
 
 <div class="d-grid gap-2 d-md-block">
-    <a href="/home" class="bi bi-house-fill">
+    <a href="/" class="bi bi-house-fill">
         <button type="button" class="m4 btn btn-light">PÁGINA PRINCIPAL</button>
     </a>
-    <a href="/home/grupo/storeGrupo" class="bi bi-calendar-plus-fill">
+    <a href="/grupo/storeGrupo" class="bi bi-calendar-plus-fill">
         <button type="button" class="m4 btn btn-dark">AGREGAR GRUPO</button>
     </a>
 </div>

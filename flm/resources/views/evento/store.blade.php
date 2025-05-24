@@ -39,7 +39,7 @@
               </div>
             </div>
               <div class="col">
-                <button type="submit" class="btn btn-success mt-4" name="crear">Crear</button>
+                <button type="submit" class="btn btn-primary mt-4" name="crear">Agregar Evento</button>
               </div>
             </div>
           </form>

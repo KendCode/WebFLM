@@ -11,7 +11,7 @@ use App\Models\Beneficiario;
     return view('welcome');
 });*/
 
-Route::get('/home', [HomeController::class,'index']);
+Route::get('/', [HomeController::class,'index']);
 //Route::get('/home/grupo', [HomeController::class,'grupo']);
 
 

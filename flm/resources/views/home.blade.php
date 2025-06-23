@@ -41,7 +41,7 @@
         <div class="card-body">
           <h5 class="card-title" style="color: #7EC544;">EVENTOS</h5>
           <p class="card-text">Contenido representativo para la tarjeta de eventos.</p>
-          <a href="/home/evento/store" class="btn" style="background-color: #13C0E5; color: white;">Añadir eventos</a>
+          <a href="/evento/store" class="btn" style="background-color: #13C0E5; color: white;">Añadir eventos</a>
         </div>
       </div>
     </div>
@@ -51,7 +51,7 @@
         <div class="card-body">
           <h5 class="card-title" style="color: #7EC544;">BENEFICIARIOS</h5>
           <p class="card-text">Contenido representativo para la tarjeta de beneficiarios.</p>
-          <a href="/home/beneficiario/storeBeneficiario" class="btn" style="background-color: #13C0E5; color: white;">Añadir beneficiarios</a>
+          <a href="/beneficiario/storeBeneficiario" class="btn" style="background-color: #13C0E5; color: white;">Añadir beneficiarios</a>
         </div>
       </div>
     </div>
@@ -61,7 +61,7 @@
         <div class="card-body">
           <h5 class="card-title" style="color: #7EC544;">GRUPOS</h5>
           <p class="card-text">Contenido representativo para la tarjeta de grupos.</p>
-          <a href="/home/grupo/storeGrupo" class="btn" style="background-color: #13C0E5; color: white;">Añadir grupos</a>
+          <a href="/grupo/storeGrupo" class="btn" style="background-color: #13C0E5; color: white;">Añadir grupos</a>
         </div>
       </div>
     </div>
